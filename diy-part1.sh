@@ -16,3 +16,12 @@
 # Add a feed source
 echo 'src-git helloworld https://github.com/fw876/helloworld' >>feeds.conf.default
 #echo 'src-git passwall https://github.com/xiaorouji/openwrt-passwall' >>feeds.conf.default
+
+# 进入 OpenWrt 源码目录
+cd openwrt
+
+# 添加高通 NSS 满血加速补丁
+git pull https://github.com/breeze303/ipq60xx-nss.git main
+
+# 添加 iStore 应用商店 feed
+echo 'src-git istore https://github.com/linkease/istore.git' >> feeds.conf.default
